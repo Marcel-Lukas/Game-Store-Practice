@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="src/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="src/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="src/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="src/img/favicon/site.webmanifest">
+    <title>Gamestore</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+    <style>
+      video {
+        margin-top: 68px;
+        margin-bottom: 480px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo-con">
+        <a href="index.html">
+          <img id="logo"src="src/img/logo.png" alt="Game Store Logo">
+        </a>
+      </div>
+      <h1>Dein günstiger Game Store</h1>
+    </header>
+
+    <audio id="sound" src="src/mov/haha.mp4"></audio>
+    <main>
+      <video id="vid" width="1200" muted controls>
+        <source src="src/mov/haha.mp4" type="video/mp4">
+    </video>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+      window.addEventListener('load', () => {
+          const video = document.querySelector('#vid');
+          const audio = document.querySelector('#sound');
+          audio.volume = 0.5;
+          video.play();
+          audio.play();
+      });
+    </script>
+  </body>
+</html>

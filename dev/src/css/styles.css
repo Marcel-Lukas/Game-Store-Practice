@@ -1,0 +1,391 @@
+/* OpenSans Light */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans Light Italic */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OpenSans Regular */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans Italic */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OpenSans Medium */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans Medium Italic */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OpenSans Bold */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans Bold Italic */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OpenSans ExtraBold */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans ExtraBold Italic */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/openSans-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* Global */
+
+/* Farbe Variablen */
+
+:root {
+  --header-footer: rgb(140, 0, 255);
+  --header-footer-shadow: rgba(20, 170, 207, 0.85);
+  --main-background: rgb(0, 118, 253);
+  --text-shadow-h1: rgba(149, 229, 253, 0.9);
+  --game-background: rgba(145, 210, 253, 0.35);
+
+  --schwarz: rgb(0, 0, 0);
+  --schwarz-h: rgb(35, 35, 35);
+
+  --white: rgb(255, 255, 255);
+  --white-d: rgb(228, 228, 228);
+}
+
+
+/* Das gesamte Scrollbalken-Element */
+::-webkit-scrollbar {
+    width: 22px;
+    height: 22px;
+}
+/* Der Scrollbalkenhintergrund */
+::-webkit-scrollbar-track {
+  background-image: url('../img/scrollbar.jpg');
+}
+/* Der Scrollbalkengriff (Slider) */
+::-webkit-scrollbar-thumb {
+    background: rgba(83, 24, 95, 0.6);
+    border: solid 1px rgba(197, 197, 197, 0.7);
+    border-radius: 8px;
+}
+/* Hover-Effekt auf dem Scrollbalkengriff */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    border: solid 2px rgb(197, 197, 197);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: 'OpenSans';
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  filter: drop-shadow(0px 6px 8px var(--header-footer-shadow));
+  background-image: url('../img/header-back.jpg');
+}
+
+
+#logo {
+  height: 100px;
+  filter: drop-shadow(0px 0px 6px rgba(9, 56, 211, 0.9));
+  margin-left: 40px;
+  transition: transform 777ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(106%);
+    filter: drop-shadow(0px 0px 4px rgba(51, 51, 51, 0.9));
+  }
+}
+
+.loaded-img {
+  transform: rotatey(720deg);
+}
+
+h1 {
+  margin-left: 333px;
+  font-size: 60px;
+  font-weight: 800;
+  font-style: italic;
+  background: linear-gradient(to right, rgb(255, 94, 0), rgb(255, 136, 0), rgb(0, 255, 234), rgb(255, 0, 255), rgb(51, 86, 243), rgb(255, 94, 0));
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(3px 2px 2px var(--schwarz-h));
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-image: url('../img/hintergrund.webp');
+}
+
+
+.game-content {
+  padding: 48px;
+  margin: auto;
+  width: min(1400px, 90%);
+  background-color: var(--game-background);
+  backdrop-filter: blur(2px);
+  border-radius: 24px;
+  box-shadow: 0px 0px 8px var(--white-d);
+  margin-top: 36px;
+}
+
+.game-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(206, 206, 206, 0.8);
+}
+
+.game-box img {
+  width: 500px;
+  border: solid 2px var(--schwarz);
+  box-shadow: 0px 0px 8px var(--schwarz-h);
+  border-radius: 8px;
+}
+
+table {
+  padding-left: 20px;
+}
+
+.game-box {
+  display: flex;
+}
+
+.game-content table {
+  margin-left: 24px;
+}
+
+.td1 {
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 24px;
+}
+
+.td2 {
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding-left: 24px;
+  padding-right: 26px;
+  backdrop-filter: blur(3px);
+}
+
+.buy {
+  margin-left: 20px;
+  padding: 5px 16px;
+  border-radius: 12px;
+  background-color: var(--main-background);
+  border: solid 1px var(--schwarz-h);
+  font-size: 16px;
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4) inset, 
+  -4px -4px 8px rgba(0, 0, 0, 0.3) inset;
+}
+
+.buy:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+}
+
+.description-box {
+  margin-top: 24px;
+  width: 720px;
+}
+
+.description-box > span {
+  font-size: 20px;
+}
+
+
+.btn-unlike {
+  display: inline-block;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 3px;
+  width: 26px;
+  height: 26px;
+	background: rgba(95, 96, 100, 0.55);
+  clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-like {
+  display: inline-block;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 3px;
+  width: 26px;
+  height: 26px;
+	background: rgb(255, 23, 23);
+	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+	border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.comment-box {
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin-top: 24px;
+  height: 240px;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 22px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.4),
+	4px 4px 8px rgba(0, 0, 0, 0.4)inset;
+}
+
+
+.usernick {
+  font-weight: 600;
+}
+
+.comment {
+  margin-top: 1px;
+  margin-bottom: 24px;
+}
+
+.add-comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nick {
+  margin-right: 22px;
+}
+
+label {
+  margin-right: 8px;
+}
+
+input {
+  background-color: rgba(116, 185, 250, 0.6);
+  height: 28px;
+  width: 160px;
+  padding-left: 8px;
+  border: solid 1px var(--schwarz-h);
+  font-size: 18px;
+  border-radius: 8px;
+  &:focus {
+    background-color: rgba(194, 226, 255, 0.7);
+  }
+}
+
+textarea {
+  background-color: rgba(116, 185, 250, 0.6);
+  height: 60px;
+  width: 600px;
+  padding-left: 8px;
+  border: solid 1px var(--schwarz-h);
+  font-size: 18px;
+  border-radius: 8px;
+  &:focus {
+    background-color: rgba(194, 226, 255, 0.7);
+  }
+}
+
+
+
+.btn {
+  margin-top: 12px;
+  padding: 8px 20px;
+  border-radius: 12px;
+  background-color: var(--main-background);
+  font-size: 17px;
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4) inset, 
+  -4px -4px 8px rgba(0, 0, 0, 0.3) inset;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+}
+
+footer {
+  background-image: url('../img/header-back.jpg');
+  height: 120px;
+  filter: drop-shadow(0px -6px 8px var(--header-footer-shadow));
+}
