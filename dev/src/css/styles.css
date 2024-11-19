@@ -590,6 +590,13 @@ footer {
 @media (max-width: 630px) {
   .description-box {
     width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .comment-box {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
   }
   textarea {
     width: 300px;
@@ -631,7 +638,7 @@ footer {
     width: 280px;
   }
   textarea {
-    width: 160px;
+    width: 240px;
   }
   .game-content {
     padding: 6px;
@@ -649,6 +656,9 @@ footer {
     padding: 6px 10px;
     margin-bottom: 8px;
     font-size: 16px;
+  }
+  .comment-box {
+    width: 360px;
   }
 }
 
