@@ -1,5 +1,22 @@
 let games = [
   {
+    "name": "S.T.A.L.K.E.R. 2",
+    "publisher": "GSC Game World",
+    "picture" : "src/img/stalker2.png",
+    "likes": 1,
+    "liked": false,
+    "release" : "19. November 2024",
+    "price": 45.99,
+    "genre": "Action, Abenteuer, Rollenspiel",
+    "description" : "Entdecke die riesige Sperrzone von Tschornobyl voller gefährlicher Gegner, tödlicher Anomalien und mächtiger Artefakte. Kreiere auf dem Weg zum Herzen von Tschornobyl deine eigene epische Geschichte.",
+    "comments": [
+        {
+            "user": "john345",
+            "comment": "Geiles Game!!!"
+        }
+    ]
+},
+  {
     "name": "Grand Theft Auto VI",
     "publisher": "Rockstar Games",
     "picture" : "src/img/gta-6.png",
