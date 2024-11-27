@@ -1,7 +1,6 @@
 function renderGames() {
   let contentRef = document.getElementById("game-list");
   contentRef.innerHTML = "";
-
   for (let indexGames = 0; indexGames < games.length; indexGames++) {
       contentRef.innerHTML += getGameTemplate(indexGames);
       renderComments(indexGames);
@@ -25,7 +24,6 @@ function renderLikeSection(indexGames) {
   if (games[indexGames].liked === true) {
       contentRef.innerHTML = getLikeSectionTemplate('btn-like', indexGames);
   }
-
   if (games[indexGames].liked === false) {
       contentRef.innerHTML = getLikeSectionTemplate('btn-unlike', indexGames);
   }
