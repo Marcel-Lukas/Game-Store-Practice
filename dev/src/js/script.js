@@ -26,12 +26,9 @@ function checkStorageLikes(indexGame) {
   if (likeStatus == null) {
       likeStatus = games[indexGame].liked;
   }
-
   else {
       games[indexGame].liked = likeStatus;
   }
-
-
   let numberOfLikes = JSON.parse(sessionStorage.getItem("numberOfLikes" + indexGame));
   if (numberOfLikes == null) {
       numberOfLikes = games[indexGame].likes;
